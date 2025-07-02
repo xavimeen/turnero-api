@@ -35,3 +35,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Others ###
+/target/
+*.log
+*.class
+.DS_Store
+.env
