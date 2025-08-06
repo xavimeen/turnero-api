@@ -1,0 +1,11 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 90%         # cobertura mínima total requerida
+        threshold: 1%       # tolerancia antes de fallar
+        flags: tests    # opcional: etiqueta para identificar este tipo de cobertura
+    patch:
+      default:
+        target: 90%         # cobertura mínima del código nuevo en el PR
+        threshold: 1%
