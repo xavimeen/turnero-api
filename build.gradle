@@ -43,4 +43,16 @@ jacocoTestReport {
 		xml.required = true
 		html.required = true
 	}
+
+	afterEvaluate {
+		classDirectories.setFrom(
+				files(classDirectories.files.collect {
+					fileTree(dir: it, exclude: [
+							'sun/**', // Exclude all sun.* classes
+							'jdk/**', // Exclude all jdk.* classes
+							'java/**', // Exclude all java.* classes if needed
+					])
+				})
+		)
+	}
 }
