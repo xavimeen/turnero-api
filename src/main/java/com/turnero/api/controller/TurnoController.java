@@ -21,7 +21,6 @@ public class TurnoController {
 
     @PostMapping
     public void reservarTurno(@RequestBody TurnoRequestDto turnoDto) {
-
         var turno = turnoMapper.toEntity(turnoDto);
         turnoService.reservarTurno(turno);
     }
